@@ -1,0 +1,233 @@
+/* COLOR CSS FILE */
+
+a{
+	color: #f75353;
+}
+
+a:hover{
+	color: #db2d2d;
+}
+
+/* Header */
+.header .navbar-default{
+	border-top: 6px solid #db2d2d;	
+	background: #db2d2d;
+}
+
+.header .navbar-default .navbar-brand span.logo{
+	background: #f75353;
+}
+
+.header .navbar-default .navbar-brand .logo i{
+	color: #f75353;
+}
+
+.header .navbar-default .navbar-nav > li a:hover{
+	color: #f79393;
+}
+
+.header .navbar-default  .navbar-nav > .dropdown .dropdown-menu {
+	background: #f75353;
+}
+
+.header .navbar-default  .navbar-nav > .dropdown .dropdown-menu:after {
+	border-bottom-color: #f75353;
+}
+
+.header .navbar-default .navbar-nav > li a span{
+	color: #fff;/*#f75353; */
+}
+
+.header .navbar-default  .navbar-nav > li.open ul li a{
+	background: #f75353;
+}
+
+.header .navbar-default  .navbar-nav > li.dropdown ul li a:hover{
+	background: #db2d2d;
+}
+
+/* Hero */
+
+.hero .hero-logo{
+	background: #f75353;
+}
+
+/* About Us */
+
+.about .about-skill .about-quote span.quote{
+	color: #f75353;
+}
+
+/* Contact */
+
+.contact .contact-container .contact-widget i.c-icon{
+	color: #f75353;
+}
+
+.contact .contact-item{
+	background: #f75353;
+}
+/*home */
+.homeMessage{
+	background: #f75353;
+}
+/* Blog */
+
+.blog .blog-content .blog-post .blog-post-img span.date{
+	background: #f75353;
+}
+
+/***************  INNER PAGE CSS START ***************/
+
+.inner-page-banner hr{
+	border-top:5px solid #f75353;
+}
+
+/* Inner About Us */
+
+.inner-page .aboutus .inner-experience{
+	background: #f75353;
+}
+
+/* Inner blog */
+ 
+.paging span, .paging a {
+	border:1px solid #f75353;
+}
+
+.paging a:hover{
+	background: #db2d2d;
+}
+ 
+.paging .current{
+	background: #f75353;
+}
+
+.inner-blog .inner-sidebar .side-widget h4{
+	background: #f75353;
+}
+
+/* Inner FAQ */
+
+.inner-faq .panel-default > .panel-heading{
+	background: #f75353;
+}
+
+/* Inner Page 404 Error */
+
+.inner-error h3 span{
+	color: #f75353;
+}
+
+/******* E-Commerce CSS *******/
+
+.btn-kart-md a.btn,
+.btn-kart-sm a.btn{
+	background: #f75353;
+}
+
+.btn-kart-md a.btn:hover,
+.btn-kart-sm a.btn:hover{
+	background: #db2d2d;
+}
+#filters a.btn{background: #f75353;}
+#filters a.btn:hover{ background: #db2d2d;}
+
+
+/* Account */
+
+.inner-page .account .account-sidebar h3,
+.inner-page .product .product-sidebar h3{
+	background: #db2d2d;
+}
+
+.inner-page .account .account-sidebar ul li a{
+	background: #f75353;
+}
+
+.inner-page .account .account-sidebar ul li a:hover{
+	background: #db2d2d;
+}
+
+/* Product Items */
+
+.inner-page .product .product-sidebar .nav li a{
+	background: #f75353;
+}
+
+.inner-page .product .product-sidebar .nav li a:hover{
+	background: #db2d2d;
+}
+
+.inner-page .product .single-product p .label{
+	background: #f75353;
+}
+
+/* Confirmation */
+
+.inner-page .product .confirmation h5 span{
+	color: #f75353;
+}
+
+/* Product-sidebar */
+
+.product .sidebar-widget i{
+	background: #f75353;
+}
+
+.product .sidebar-widget h5 span{
+	color: #f75353;
+}
+
+.body-sidebar .sidebar-widget i{
+	background: #f75353;
+}
+
+.body-sidebar .sidebar-widget h5 span{
+	color: #f75353;
+}
+
+/* Post Slider */
+
+.post-slider .carousel .c-control{
+	background: #f75353;
+}
+
+.post-slider .p-item .p-caption span.label{
+	background: #f75353;
+}
+
+.post-slider .p-item .p-caption a.btn-price:hover{
+	background: #db2d2d;
+}
+
+/* Offer Product */
+
+.offer .offer-item .offer-details span.offer-price{
+	color: #f75353;
+}
+
+.offer .offer-item .offer-details .offer-icons i{
+	color: #db2d2d;
+}
+
+.offer .offer-item a.btn{
+	background: #f75353;
+}
+
+.offer .offer-item a.btn:hover{
+	background: #db2d2d;
+}
+
+/***************  INNER PAGE CSS END ***************/
+
+/* footer */
+
+.footer .footer-widget .term li i{
+	color: #f75353;
+}
+
+/* Back to top */
+.scroll-to-top {
+	background: #f75353; 
+}

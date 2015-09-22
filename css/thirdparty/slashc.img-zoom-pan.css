@@ -1,0 +1,11 @@
+span.slashc-img-zoom-pan
+{ 
+	display: block; /* make it block */
+	overflow: hidden; /* hide overflow */
+	position: relative; /* set position to relative */
+	cursor: move; /* show nice cursor */
+}
+span.slashc-img-zoom-pan img
+{
+	position: relative;
+}
