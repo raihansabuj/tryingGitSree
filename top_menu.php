@@ -19,7 +19,7 @@
   								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="fa fa-angle-down"></span></a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="product_banarasi.php">Benarasi</a></li>
+										<li><a href="product_banarasi.php">Banarasi</a></li>
 										<li><a href="product_casual.php">Casual</a></li>
 										<li><a href="product_party.php">Party</a></li>
 										<li><a href="product_kurtitops.php">Kurti Tops</a></li>

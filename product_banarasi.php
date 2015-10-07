@@ -1,3 +1,5 @@
+<?php include("admin/includes/connect.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -165,8 +167,8 @@
 									<li><a href="#" data-filter=".four" class="btn btn-default"> $250+</a></li>
  								</ul> -->
 								</p>
-								<ul id="preview" class="" style="padding:0; margin:0;">
-									<!-- Add the above used filter names inside div tag. You can add more than one filter names. For image lightbox you need to include "a" tag pointing to image link, along with the class "prettyphoto". -->  
+								<?php include "product_shoreel.php"; ?>
+								<!--<ul id="preview" class="" style="padding:0; margin:0;">
 									 
 									
 									<li class="offer-item element four">
@@ -176,17 +178,9 @@
 											<img alt="Image 02" src="img/product/large/l_SB5601.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $349.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$349.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -199,17 +193,9 @@
 											<img alt="Image 01" src="img/product/large/l_SB7507.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $129.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$129.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -221,17 +207,9 @@
 											<img alt="Image 01" src="img/product/large/l_D6252.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $295.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a> $295.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -243,17 +221,9 @@
 											<img alt="Image 02" src="img/product/large/l_D6307.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $358.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$358.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -261,21 +231,13 @@
 									<li class="offer-item element four">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
-											<img alt="Image 02" src="img/product/small/2003_1s.jpg" />
-											<img alt="Image 02" src="img/product/large/2003_1.jpg" />
+											<img alt="Image 02" src="img/product/small/shr97-enlarge.jpg" />
+											<img alt="Image 02" src="img/product/large/shr97-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $349.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$349.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -288,17 +250,9 @@
 											<img alt="Image 01" src="img/product/large/sar447-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $129.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$129.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -306,21 +260,13 @@
 									<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
-											<img alt="Image 02" src="img/product/small/lcs87-enlarge-w.jpg" />
-											<img alt="Image 02" src="img/product/large/lcs87-large.jpg" />
+											<img alt="Image 02" src="img/product/small/shr115-enlarge.jpg" />
+											<img alt="Image 02" src="img/product/large/shr115-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $138.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$138.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -328,27 +274,20 @@
 									<li class="offer-item element four">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
-											<img alt="Image 02" src="img/product/small/lwk1553-enlarge-w.jpg" />
-											<img alt="Image 02" src="img/product/large/lwk1553-large.jpg" />
+											<img alt="Image 02" src="img/product/small/stl415-enlarge.jpg" />
+											<img alt="Image 02" src="img/product/large/stl415-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Wedding</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $438.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Bridal</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a>$438.0</span></h3>
 											<div class="offer-icons">
-												<!-- Icons -->
-												 <!--
-												 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												 Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
 									</li>
 									   
-								</ul>
+								</ul> -->
 						 
 							</div>							
 							<!-- Offer Product End -->

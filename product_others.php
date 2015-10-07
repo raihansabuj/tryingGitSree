@@ -191,26 +191,24 @@
 											<div class="clearfix"></div>
 										</div>
 									</li>
-									<li class="offer-item element two">
-										<a href="product_details.php" title="View Detail" >						
+									<li class="offer-item element four">
+										<a href="product_details.php" title="View Detail" >
 										<span class="slashc-img-zoom-pan">
-											<img alt="Image 02" src="img/product/small/mpc433-enlarge.jpg" />
-											<img alt="Image 02" src="img/product/large/mpc433-large.jpg" />
+											<img alt="Image 01" src="img/product/small/mrg3-enlarge.jpg" />
+											<img alt="Image 01" src="img/product/large/mrg3-large.jpg" />
 										</span>
 										</a>
-										
+										<!-- Offer Details -->
 										<div class="offer-details">
-											
-											<h3><a href="product_details.php">Panjabi</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $69.0</span>--></h3>
-											
+											<!-- Product Title / Heading -->
+											<h3><a href="product_details.php">Panjabi</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $295.0</span>--></h3>
+											<!-- Icons And Button -->
 											<div class="offer-icons">
-												
-												 <!--
+												<!-- Icons -->
 												 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												
-												<a href="product_details.php" class="btn btn-default pull-right">Buy Now</a>
-												-->
+												 <!--
+												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"> <i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
+												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -314,7 +312,7 @@
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
 											<img alt="Image 02" src="img/product/small/bedsheet2.jpg" />
-											<img alt="Image 02" src="img/product/large/bedsheet1-large.jpg" />
+											<img alt="Image 02" src="img/product/large/bedsheet2-large.jpg" />
 										</span>
 										</a>
 										

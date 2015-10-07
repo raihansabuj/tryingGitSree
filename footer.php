@@ -94,6 +94,6 @@
 					</div>
 					<!-- Footer Copy Right -->
 					<div class="copy-right">
-						<p>&copy; Copyright 2015 <a href="http://www.rndinformatics.com" target="_blank">R&D Informatics</a></p>
+						<p>&copy; Copyright <?php echo date("Y"); ?> <a href="http://www.rndinformatics.com" target="_blank">R&D Informatics</a></p>
 					</div>
 				</div>

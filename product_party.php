@@ -214,7 +214,7 @@
 											<div class="clearfix"></div>
 										</div>
 									</li>
-									 
+								<!--	 
 									<li class="offer-item element four">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
@@ -222,22 +222,15 @@
 											<img alt="Image 02" src="img/product/large/l_C7312.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $269.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+											
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"> <i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
 											</div>
 											<div class="clearfix"></div>
 										</div>
 									</li>
-									 
+									 -->
 									<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >
 										<span class="slashc-img-zoom-pan">
@@ -283,50 +276,22 @@
 										</div>
 									</li>
 									 
-									<li class="offer-item element three">
+								<!--	<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >
 										<span class="slashc-img-zoom-pan">
 											<img alt="Image 01" src="img/product/small/lcs36-enlarge-p.jpg" />
 											<img alt="Image 01" src="img/product/large/lcs36-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $118.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+											
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"> <i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
-									</li>
-									<li class="offer-item element two">
-										<a href="product_details.php" title="View Detail" >						
-										<span class="slashc-img-zoom-pan">
-											<img alt="Image 02" src="img/product/small/IMG_1629-cpf.jpg" />
-											<img alt="Image 02" src="img/product/large/l_IMG_1629.jpg" />
-										</span>
-										</a>
-										<!-- Offer Details -->
-										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> from $89.0</span>--></h3>
-											<!-- Icons And Button -->
-											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"> <i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
-											</div>
-											<div class="clearfix"></div>
-										</div>
-									</li>
+									</li> -->
 									
 									<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >
@@ -351,6 +316,25 @@
 											<div class="clearfix"></div>
 										</div>
 									</li>
+								<!--	<li class="offer-item element two">
+										<a href="product_details.php" title="View Detail" >						
+										<span class="slashc-img-zoom-pan">
+											<img alt="Image 02" src="img/product/small/IMG_1629-cpf.jpg" />
+											<img alt="Image 02" src="img/product/large/l_IMG_1629.jpg" />
+										</span>
+										</a>
+										<div class="offer-details">
+										
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+										
+											<div class="offer-icons">
+												
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</li>
+									-->
+									
 									<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
@@ -374,6 +358,24 @@
 										</div>
 									</li>
 									 
+									<li class="offer-item element three">
+										<a href="product_details.php" title="View Detail" >
+										<span class="slashc-img-zoom-pan">
+											<img alt="Image 01" src="img/product/small/lan3-enlarge-w.jpg" />
+											<img alt="Image 01" src="img/product/large/lan3-large.jpg" />
+										</span>
+										</a>
+										
+										<div class="offer-details">
+											
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+										
+											<div class="offer-icons">
+											
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</li>
 									<li class="offer-item element four">
 										<a href="product_details.php" title="View Detail" >
 										<span class="slashc-img-zoom-pan">
@@ -419,47 +421,21 @@
 											<div class="clearfix"></div>
 										</div>
 									</li>
-									 
-									<li class="offer-item element three">
-										<a href="product_details.php" title="View Detail" >
-										<span class="slashc-img-zoom-pan">
-											<img alt="Image 01" src="img/product/small/ljf2-enlarge.jpg" />
-											<img alt="Image 01" src="img/product/large/ljf2-large.jpg" />
-										</span>
-										</a>
-										<!-- Offer Details -->
-										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $102.0</span>--></h3>
-											<!-- Icons And Button -->
-											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												<!-- 
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
-											</div>
-											<div class="clearfix"></div>
-										</div>
-									</li>
-									<li class="offer-item element three">
+									
+								<!-- 	<li class="offer-item element three">
 										<a href="product_details.php" title="View Detail" >						
 										<span class="slashc-img-zoom-pan">
 											<img alt="Image 02" src="img/product/small/ldw496-enlarge.jpg" />
 											<img alt="Image 02" src="img/product/large/ldw496-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
+										
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
+										
 											<h3><a href="product_details.php">Party</a><span class="offer-price pull-right"> From $228.0</span></h3>
-											<!-- Icons And Button -->
+										
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+										
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -471,17 +447,13 @@
 											<img alt="Image 01" src="img/product/large/lan4-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
+									
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $154.0</span>--></h3>
-											<!-- Icons And Button -->
+											
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+										
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -493,17 +465,13 @@
 											<img alt="Image 01" src="img/product/large/lan3-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
+									
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $162.0</span>--></h3>
-											<!-- Icons And Button -->
+											
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+											
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -515,17 +483,13 @@
 											<img alt="Image 01" src="img/product/large/lbm16-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
+										
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $126.0</span>--></h3>
-											<!-- Icons And Button -->
+											
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+										
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
@@ -537,22 +501,17 @@
 											<img alt="Image 01" src="img/product/large/lan9-large.jpg" />
 										</span>
 										</a>
-										<!-- Offer Details -->
+										
 										<div class="offer-details">
-											<!-- Product Title / Heading -->
-											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a><!--<span class="offer-price pull-right"> From $172.0</span>--></h3>
-											<!-- Icons And Button -->
+											<h3><a href="product_details.php">Party</a><a href="contact.php" class="btn btn-default pull-right">Buy Now</a></h3>
+											
 											<div class="offer-icons">
-												<!-- Icons -->
-												 
-												 <!--
-												<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-												<!-- Link Button -->
+												
 											</div>
 											<div class="clearfix"></div>
 										</div>
 									</li>
-									
+									-->
 									   
 								</ul>
 						 

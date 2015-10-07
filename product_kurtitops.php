@@ -157,14 +157,14 @@
  								<!-- Inner Page Portfolio -->
  								<p  style="padding:0; margin:0;">
 								<!-- Add filter names inside "data-filter". For example ".web-design", ".seo", etc., Filter names are used to filter the below images. -->
-								<ul id="filters">
+							<!--	<ul id="filters">
 									<li><a href="#" data-filter="*" class="btn btn-default">All</a></li>
 									<li><a href="#" data-filter=".one" class="btn btn-default">$20-$49</a></li>
 									<li><a href="#" data-filter=".two" class="btn btn-default">$50-$99</a></li>
 									<li><a href="#" data-filter=".three" class="btn btn-default">$100-$249</a></li>
 									<li><a href="#" data-filter=".four" class="btn btn-default">$250+</a></li>
- 								</ul>
-								</p>
+ 								</ul>--> 
+								</p> 
 								<ul id="preview" class="" style="padding:0; margin:0;">
 									<!-- Add the above used filter names inside div tag. You can add more than one filter names. For image lightbox you need to include "a" tag pointing to image link, along with the class "prettyphoto". -->  
 								

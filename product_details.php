@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+	include("admin/includes/connect.php"); 
+	include("admin/include.php"); 
+	
+?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -167,8 +172,18 @@
 						<div class="col-md-12">
 							<div class="offer">
 								<div class="heading">
-									<!-- Heading -->
-									<h2>Product Detail <span style="color:#000;font-weight:bold;">Party Saree</span></h2>
+									<!-- Heading --><?php 
+									if(isset($_GET['prod_id']))
+										{										
+										$proid=$_GET['prod_id'];
+										//$proid=$row_prod['product_id'];
+										//$res=mysql_query("select * from product_table WHERE product_id='$proid");
+										$res=mysql_query("select * from product_table WHERE product_id='$proid'");
+										while($row=mysql_fetch_array($res))
+										{
+										?>
+									<h2>Product Detail <span style="color:#000;font-weight:bold;"><?php echo $row['product_title'] ?></span></h2>
+										<?php }} ?>
 								</div>
 							
 							<div class="col-md-3 col-sm-5 col2uP">
@@ -185,11 +200,29 @@
 											<div class="product-slider">
 												<div id="examples">
 													<ul id="etalage">
+										<?php
+										if(isset($_GET['prod_id']))
+										{										
+										$proid=$_GET['prod_id'];
+									//	echo $proid;
+										//$proid=$row_prod['product_id'];
+										//$res=mysql_query("select * from product_table WHERE product_id='$proid");
+										$res=mysql_query("select * from product_table WHERE product_id='$proid'");
+										while($row=mysql_fetch_array($res))
+										{
+											$detimg=$row['product_id'];
+											$picimg=mysql_query("select * from `product_image` where product_id='$detimg'");
+											//while($row_imag=mysql_fetch_array($picimg))
+											{
+										?>
+										
+										
 														<li>
-																<img class="etalage_thumb_image" src="img/product/thumb/saree(50_a).png" />
-																<img class="etalage_source_image" src="img/product/large/saree(50_a).jpg" title="This is an optional description." />
+																<img class="etalage_thumb_image" src="img/product/medium/<?php echo $row_imag['image']; ?>" />
+																<img class="etalage_source_image" src="img/product/large/<?php echo $row_imag['image']; ?>" title="This is an optional description." />
 														</li>
-														<li>
+												<?php } ?>		
+													<!--	<li>
 																<img class="etalage_thumb_image" src="img/product/thumb/saree(50_b).png" />
 																<img class="etalage_source_image" src="img/product/large/saree(50_b).jpg" title="This is a sample to understand that we can put multiple image/color here" />
 														</li>
@@ -205,7 +238,7 @@
 																<img class="etalage_thumb_image" src="img/product/thumb/saree(50_e).png" />
 																<img class="etalage_source_image" src="img/product/large/saree(50_e).jpg" title="This is a sample to understand that we can put multiple image/color here" />
 														</li>
-														 
+													 -->
 													</ul>
 												</div> 
 											</div>
@@ -213,22 +246,40 @@
 										<div class="col-md-7 col-sm-5">
 											<!-- Product Details -->
 											<!-- Title -->
-											<h4>Faux Georgette Saree with Blouse</h4>
-											<p><strong>Price</strong> : <span class="label">$30</span></p>
-											<p><strong>Shipping</strong> : Free</p>
-											<p><strong>Brand</strong> : Saree</p>
-											<p><strong>Color</strong> : Multiple</p>
-											<p><strong>Blouse</strong> : Yes</p>
-											<p><strong>Availability</strong> : In Stock</p><br />
+											<h4>Faux Georgette <?php echo $row['product_title'] ?><!--Saree with Blouse --></h4>
+											
+											
+											
+											<p><strong>Name</strong> : <?php echo $row['product_title'] ?></p>
+											<p><strong>Price</strong> : <span class="label"><?php echo $row['product_price'] ?></span></p>
+											
+											
+											<p><strong>Shipping</strong> : <?php echo $row['product_shipping'] ?></p>
+											
+											<p><strong>Color</strong> : <?php echo $row['product_color_availability'] ?></p>
+											<p><strong>Blouse</strong> : <?php echo $row['product_blouse'] ?></p>
+											<p><strong>Availability</strong> : <?php echo $row['product_stock_availability'] ?></p><br />
 											<div class="form-group">
 												<!-- Dropdown menu -->
-												<select class="form-control">
-													<option>Color</option>
-													<option>Red</option>
-													<option>Blue</option>
-													<option>Green</option>
-													<option>Orange</option>
-												</select>
+												<select  name='color' style="width:200px;height:35px">
+													<?php 
+													
+													 
+													 $query=mysql_query("select * from  `sareestore`.`product_table` where product_id=$proid");
+														while ($row=mysql_fetch_array($query)){
+														//	 echo "<select  name='color'>";
+																	$categories = '';
+																	$colors = explode(",", $row['product_color_availability']);
+																	foreach($colors as $color) {
+																		$color = trim($color);
+																		echo $categories= "<option value='" . $color . "'>" . get_color_name($color) . "</option>";
+																	}
+														//	echo "</select>";	
+														} 
+											
+											 
+													?> 
+													</select>
 											</div>
 											<!-- Quantity and add to cart button -->
 											<div class="input-group">
@@ -238,14 +289,25 @@
 												</span>
 											</div><!-- /input-group -->
 											<!-- Add to wish list -->
-											<a href="wish-list.html">+ Add to Wish List</a>
+											<a href="#">+ Add to Wish List</a>
 										</div>
+										<?php }} ?>
 									</div>
 								
 								<div class="row">
 									<div class="col-md-12">
 										<!-- Description, specs and review -->
 										<div class="product-desc">
+										<?php	
+										if(isset($_GET['prod_id']))
+										{										
+										$proid=$_GET['prod_id'];
+										//$proid=$row_prod['product_id'];
+										//$res=mysql_query("select * from product_table WHERE product_id='$proid");
+										$res=mysql_query("select * from product_table WHERE product_id='$proid'");
+										while($row=mysql_fetch_array($res))
+										{
+										?>
 											<ul id="myTab" class="nav nav-tabs">
 												<!-- Use uniqe name for "href" in below anchor tags -->
 												<li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
@@ -257,15 +319,11 @@
 											<div id="myTabContent" class="tab-content">
 												<!-- Description -->
 												<div class="tab-pane fade in active" id="tab1">
-													<h5><strong>Saree</strong></h5>
-													<p>Multiple faux georgette saree designed with zari, sequins, stone, gota lace and patch border work. Available with black art silk and net blouse fabric, blouse shown in the image is just for photography purpose. (Slight variation in color and patch border work is possible.)</p>
-													<h5><strong>Know Your Fabric</strong></h5>
-													<p>Loops, crinkles, pulled yarns, thread irregularities or missing yarns are inevitable features of Georgette. Such variations are natural characteristics of the fabric and add an aesthetic impact to it.
-													<h5><strong>Color</strong></h5>
-													<p>Shades displayed across the range of fabric and accessories may slightly vary from the actual color. This may happen due to multiple settings in your monitor or viewing device (Laptop/Mobile/Tab), or impact of our digital photo shoots. We request you to consider these minor color variations.
-													</p>
+													<h5><strong><?php echo $row['product_title'] ?></strong></h5>
+													<p><?php echo $row['product_description'] ?></p>
+													
 													<h5><strong>Returns</strong></h5>
-													<p><a href="privecy.php" target="_blank" >Read the complete Returns Policy</a></p>
+													<p><a href="#" target="" >Read the complete Returns Policy</a></p>
 												</div>
 												<!-- Sepcs -->
 												<div class="tab-pane fade" id="tab2">
@@ -274,36 +332,38 @@
 														<tbody>
 															<tr>
 																<td><strong>Item Code</strong></td>
-																<td>SFS43</td>
+																<td><?php echo $row['product_item_code'] ?></td>
 															</tr>
 															<tr>
 																<td><strong>Work </strong></td>
-																<td>Embroidered</td>
+																<td><?php echo $row['product_work_type'] ?></td>
 															</tr>
 															<tr>
 																<td><strong>Color</strong></td>
-																<td>Red, Pink, Green, Yellow, Orange</td>
+																<td><?php echo $row['product_item_code'] ?></td>
 															</tr>
 															<tr>
 																<td><strong>Print</strong></td>
-																<td>Zari, Sequins, Stone, Gota Lace and Patch Border Work</td>
+																<td><?php echo $row['product_print_type'] ?></td>
+																<!--<td>Zari, Sequins, Stone, Gota Lace and Patch Border Work</td> -->
 															</tr>
 															<tr>
 																<td><strong>Weight  </strong></td>
-																<td>Party</td>
+																<td><?php echo $row['product_weight'] ?></td>
 															</tr>
 															<tr>
 																<td><strong>Fabric</strong></td>
-																<td>Georgette</td>
+																<td><?php echo $row['fabric_name'] ?></td>
 															</tr>
 															<tr>
 																<td><strong>Dry </strong></td>
-																<td>clean only</td>
+																<td><?php echo $row['care_name'] ?></td>
 															</tr>
 														                           
 														</tbody>
 													</table>
 												</div>
+										<?php }} ?>
 												<!-- Review -->
 												<div class="tab-pane fade" id="tab3">
 													<h5><strong>Product Reviews :</strong></h5>
@@ -316,39 +376,78 @@
 													<hr />
 													<h5><strong>Write a Review</strong></h5>
 													<hr />
-													<form role="form">
+													
+													<?php 
+													
+
+													if(isset($_POST['submit'])){
+													
+													//	$product_id=$_POST[($proid)];
+														
+														$name=$_POST['name'];
+														$email=$_POST['email'];
+														$rating=$_POST['rating'];
+														$review=$_POST['review'];
+														date_default_timezone_set("Asia/Dhaka");
+														$review_entrydate= date('d-m-Y H:i:s a');
+														if($email=='' or $rating==''){
+
+														echo "<script>alert('all field should fill up')</script>";
+															//exit();
+														}
+														else{
+															
+															$insert_query ="INSERT INTO review_product (product_id,name,email,rating,review,review_entrydate) values ('$proid','$name','$email','$rating','$review','$review_entrydate')";
+															
+															if(mysql_query($insert_query)){
+															
+															echo "<center><h1>Post Published Successfully</h1></center>";
+															
+															}
+														
+														}
+
+													
+													}
+										            
+													 ?>
+													<form role="form" method="post" action="#">
 														<div class="form-group">
 															<label for="name">Your Name</label>
-															<input type="text" class="form-control" id="name" placeholder="Enter Name">
+															<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
 														</div>                                    
 														<div class="form-group">
 															<label for="exampleInputEmail1">Email address</label>
-															<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+															<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
 														</div>
 														<div class="form-group">
 															<label for="rating">Rating</label>
-															<!-- Dropdown menu -->
-															<select class="form-control">
+															<input class="form-control" style="border-radius: 3px;color: #393939;height: 33px;padding: 0px 4px 0;width: 200px;" type="number" name="rating" min="1" max="5" value="1">
+														<!--	<select class="form-control">
 																<option>Rating</option>
 																<option>1</option>
 																<option>2</option>
 																<option>3</option>
 																<option>4</option>
 																<option>5</option>
-															</select>
+															</select> -->
 														</div>
 														<div class="form-group">
 															<label for="exampleInputEmail1">Review</label>
-															<textarea class="form-control" rows="3"></textarea>
+															<textarea class="form-control" rows="3" name="review"   ></textarea>
 														</div>  
-														<button type="submit" class="btn btn-info">Send</button>
+														<button type="submit" name="submit" class="btn btn-info">Send</button>
 														<button type="reset" class="btn btn-default">Reset</button>
 													</form>
 												</div>
 										   </div>
 										</div>
+										<?php 
+												
+											?>
 									</div>
 								</div>
+								
 							</div>
 						</div>
 							</div>

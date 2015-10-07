@@ -136,12 +136,48 @@
 				<!-- Slider banner -->
 				<div class="banner">
 					<ul>
-						<!-- SLIDE NR. 1 -->
-						<li data-transition="slidedown" data-slotamount="10" data-masterspeed="900"  data-delay="10000" >
+					
+						
+						<!-- SLIDE NR. 2 -->
+						<li data-transition="fadefromtop" data-slotamount="5" data-masterspeed="1700"  >
 							<!-- MAIN IMAGE -->
+							<img src="img/slider/puja_banner.jpg" style="width:90% !important;" alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />     
+								
+							<div class="tp-caption lfr very_large_text heading colorLightRed" 
+								style="color: #FFF !important;font-size:70px; line-height:78px;"
+								data-x="400"
+								data-hoffset="80"
+								data-y="110"
+								data-speed="1500"
+								data-start="2400"
+								data-easing="Power4.easeOut"
+								data-endspeed="300"
+								data-endeasing="Linear.easeNone"
+								data-captionhidden="off"> <center>শাড়ি হাউস এ </center> শারদীয় দুর্গাপূজার<center>শুভেচ্ছা </center>
+							</div> 
+							<!-- LAYERS NR. 3 // Heading 
+							<div class="tp-caption lfr large_text slide-one heading colorLightGreen ekusheyGhorautra" 
+								style="color: #0000FF !important; font-size:50px; line-height:65px;"
+								data-x="530"
+								data-hoffset="80"
+								data-y="220"
+								data-speed="1500"
+								data-start="2400"
+								data-easing="Power4.easeOut"
+								data-endspeed="300"
+								data-endeasing="Linear.easeNone"
+								data-captionhidden="off">শারদীয় </br>দুর্গাপুজার</br> শুভেচ্ছা 
+							</div>
+							-->
+						
+						</li>
+						
+					
+						<!-- SLIDE NR. 1 -->
+				<!--		<li data-transition="slidedown" data-slotamount="10" data-masterspeed="900"  data-delay="10000" >
+							
 							<img src="img/slider/transparent.png"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />    
 							
-							<!-- LAYERS NR. 1.1 // Price Tag 	-->
 							<div class="tp-caption lft"
 								data-x="0"
 								data-y="0"
@@ -166,7 +202,7 @@
 								data-captionhidden="off">বৈচিত্রময়  শাড়ির</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ঈদ <br>  সম্ভারে স্বাগতম 
 							</div>
 							 
-						</li>
+						</li>  -->
 						<li data-transition="slidedown" data-slotamount="10" data-masterspeed="900"  data-delay="10000" >
 							<!-- MAIN IMAGE -->
 							<img src="img/slider/transparent.png"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />    
@@ -568,7 +604,7 @@
 									<!-- Flat Icon Image -->
 									<img src="img/product/thumb/SB5601-w.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
 									<!-- Title -->
-									<span class="f-item-title">Benarasi</span>
+									<span class="f-item-title">Banarasi</span>
 								 
 								<!-- Paragraph -->
 								<p>(Wedding/Bridal)</p>
@@ -593,7 +629,7 @@
 							<div class="feature-item animated">
 								<a href="product_party.php">
 									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/C7312-cpf-th.jpg" class="img-responsive"style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
+									<img src="img/product/thumb/lwk1852w.jpg" class="img-responsive"style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
 									<!-- Title -->
 									<span class="f-item-title">Party</span>
 								

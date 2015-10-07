@@ -23,43 +23,53 @@
 				</div>
 				<div class="carousel">
 					<ul id="preview" class="" style="padding:0; margin:0;">
-						<!-- Add the above used filter names inside div tag. You can add more than one filter names. For image lightbox you need to include "a" tag pointing to image link, along with the class "prettyphoto". -->  
-						 
-						
+						 <?php 
+							$res=mysql_query("select * from product_table order by product_entry_date DESC LIMIT 6");
+							while($row=mysql_fetch_array($res))
+							{
+						?>
 						<li class="offer-item ">
-							<a href="product_details.php" title="View Detail" >						
-							<span class="slashc-img-zoom-pan">
-								<img alt="Image 02" src="img/product/small/lwk1553-enlarge-w.jpg" />
-								<img alt="Image 02" src="img/product/large/lwk1553-large.jpg" />
+							<?php 
+							
+								$ghoraddim=$row['product_id'];
+								$pic=mysql_query("select * from `product_image` where product_id='$ghoraddim' order by product_img_entry_date DESC Limit 1");
+								while($row_image=mysql_fetch_array($pic))
+								{	
+								?>				
+								<a href="product_details.php" title="View Detail" >
+								<?php // echo $row_image['image']; ?>
+								<span class="slashc-img-zoom-pan">
+								<img alt="Image 01" src="img/product/medium/<?php echo $row_image['image']; ?>"/>
+								<img alt="Image 01" src="img/product/large/<?php echo $row_image['image']; ?>"/>
 							</span>
-							</a>
-							<!-- Offer Details -->
-							<div class="offer-details">
-								<!-- Product Title / Heading -->
-								<h3><a href="product_details.php">Benarasi</a><span class="offer-price pull-right"> 
-									<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
-								<div class="offer-icons">
-									<!-- Icons -->
-								</div>
-								<div class="clearfix"></div>
-							</div>
+								</a>
+						<?php 	} ?>
+								
+									
+									<!-- Offer Details -->
+									<div class="offer-details">
+										<!-- Product Title / Heading -->
+										<h3><a href="product_details.php"><?php echo $row['product_title']; ?></a><span class="offer-price pull-right"> 
+											<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
+										<!-- Icons And Button -->
+										<div class="offer-icons">
+											<!-- Icons -->
+										</div>
+										<div class="clearfix"></div>
+									</div>
 						</li>
-						<li class="offer-item">
+						<?php } ?>
+					<!--	<li class="offer-item">
 							<a href="product_details.php" title="View Detail" >
 							<span class="slashc-img-zoom-pan">
 								<img alt="Image 01" src="img/product/small/D8309-cpc.jpg" />
 								<img alt="Image 01" src="img/product/large/l_D8309.jpg" />
 							</span>
 							</a>
-							<!-- Offer Details -->
 							<div class="offer-details">
-								<!-- Product Title / Heading -->
 								<h3><a href="product_details.php">Casual</a><span class="offer-price pull-right">
 									<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
 								<div class="offer-icons">
-									<!-- Icons -->
 									 
 								</div>
 								<div class="clearfix"></div>
@@ -72,17 +82,10 @@
 								<img alt="Image 01" src="img/product/large/lcs36-large.jpg" />
 							</span>
 							</a>
-							<!-- Offer Details -->
 							<div class="offer-details">
-								<!-- Product Title / Heading -->
 								<h3><a href="product_details.php">Party</a><span class="offer-price pull-right"> <a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
 								<div class="offer-icons">
-									<!-- Icons -->
 									 
-									 
-								<!--	<a href="product_details.php" class="offer-tooltip" title="" data-placement="top" data-original-title="24 Likes"><i class="fa fa-thumbs-o-up"></i><span style="padding:5px;">24 Likes</span></a>
-									 Link Button -->
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -95,14 +98,10 @@
 											<img alt="Image 02" src="img/product/large/akt129-large.jpg" />
 										</span>
 							</a>
-							<!-- Offer Details -->
 							<div class="offer-details">
-								<!-- Product Title / Heading -->
 								<h3><a href="product_details.php">Kurti Tops</a><span class="offer-price pull-right"> 
 									<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
 								<div class="offer-icons">
-									<!-- Icons -->
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -114,14 +113,10 @@
 								<img alt="Image 02" src="img/product/large/dbu620-large.jpg" />
 							</span>
 							</a>
-							<!-- Offer Details -->
 							<div class="offer-details">
-								<!-- Product Title / Heading -->
 								<h3><a href="product_details.php">Blouse</a><span class="offer-price pull-right"> 
 									<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
 								<div class="offer-icons">
-									<!-- Icons -->
 									 
 								</div>
 								<div class="clearfix"></div>
@@ -134,19 +129,16 @@
 											<img alt="Image 01" src="img/product/large/mse282-large.jpg" />
 										</span>
 							</a>
-							<!-- Offer Details -->
 							<div class="offer-details">
-								<!-- Product Title / Heading -->
 								<h3><a href="product_details.php">Panjabi</a><span class="offer-price pull-right"> 
 									<a href="contact.php" class="btn btn-default pull-right">Buy Now</a></span></h3>
-								<!-- Icons And Button -->
 								<div class="offer-icons">
-									<!-- Icons -->
 									 
 								</div>
 								<div class="clearfix"></div>
 							</div>
-						</li>
+						</li> 
+						-->
 					</ul>				 
 				</div>
 				
