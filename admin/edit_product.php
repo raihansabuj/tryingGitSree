@@ -12,14 +12,12 @@ else {
 
 if(isset($_GET['edit'])){
 	
-	$edit_id = $_GET['edit'];
-	
-	$edit_query = "select * from product_table where product_id='$edit_id'";
-	
-	$run_edit=mysql_query($edit_query);
-				
-	while($edit_row= mysql_fetch_array($run_edit)){
-					
+ 	
+ 	$edit_id = $_GET['edit'];
+	$res=mysql_query("select * from product_table WHERE product_id='$edit_id'");
+	while($edit_row=mysql_fetch_array($res))
+	{
+	 
 		$product_id=$edit_row['product_id'];
 		$product_title=$edit_row['product_title'];
 		$product_categories=$edit_row['product_categories'];
@@ -27,7 +25,12 @@ if(isset($_GET['edit'])){
 		$product_shipping=$edit_row['product_shipping'];
 		$product_blouse=$edit_row['product_blouse'];
 		$product_stock_availability=$edit_row['product_stock_availability'];  
-		$product_color_availability=$edit_row['product_color_availability'];  
+		if(!empty($edit_row['product_color_availability'])){
+			$product_color_availability=explode(", ",$$edit_row['product_color_availability']);  
+		}else{	
+			$product_color_availability=$edit_row['product_color_availability'];  //no value 
+		}
+ 		
 		$product_item_code=$edit_row['product_item_code'];
 		$product_work_type=$edit_row['product_work_type'];
 		$product_print_type=$edit_row['product_print_type'];
@@ -35,7 +38,7 @@ if(isset($_GET['edit'])){
 		$fabric_name=$edit_row['fabric_name'];
 		$care_name=$edit_row['care_name'];
 		$product_description=$edit_row['product_description'];
-	}
+	//}
 //}
 
 
@@ -218,11 +221,7 @@ $(document).pngFix( );
 <div>
 <?php include "topmenu.php" ?>
 </div>
-<!--  start nav-outer-repeat................................................................................................. START -->
-
-<!--  start nav-outer-repeat................................................... END -->
- 
- <div class="clear"></div>
+<div class="clear"></div>
  
 <!-- start content-outer -->
 <div id="content-outer">
@@ -274,14 +273,7 @@ $(document).pngFix( );
 			<td><input type="text" name="product_title" value="<?php echo $product_title; ?>" class="inp-form" /></td>
 			<td></td>
 		</tr>
-		<!--<tr>
-			<th valign="top">Product name:</th>
-			<td><input type="text" class="inp-form-error" /></td>
-			<td>
-			<div class="error-left"></div>
-			<div class="error-inner">This field is required.</div>
-			</td>
-		</tr> -->
+		 
 		<tr>
 		<th valign="top">Categories:</th>
 		<td>
@@ -341,14 +333,29 @@ $(document).pngFix( );
 		<tr>
 			<th valign="top">Colour Available:</th>
 			<td><?php
-				$get_color_query=mysql_query("SELECT * FROM `product_color` ORDER BY product_color_name");
-				while($row_color=mysql_fetch_assoc($get_color_query)){
-	
-				echo '<input type="checkbox" name="product_color_availability['.$row_color["product_color_id"].']" value="'.$row_color["product_color_id"].'" />'.$row_color["product_color_name"].' &nbsp;&nbsp;';
-				
+				$product_color_availability=explode(",",$edit_row['product_color_availability']);
+				for ($start=0; $start < count($product_color_availability); $start++) {
+					$get_color_query=mysql_query("SELECT * FROM `product_color` ORDER BY product_color_name");
+					while($row_color=mysql_fetch_assoc($get_color_query)){
+						//applying array to check/uncheck
+						$product_colorsAll=$edit_row['product_color_availability'];
+						$color_id=$row_color["product_color_id"];
+							if(($product_color_availability[$start])==$color_id){
+								echo '<input type="checkbox"   id="$color_id"  name="product_color_availability['.$row_color["product_color_id"].']" value="'.$row_color["product_color_id"].'" checked />&nbsp;'.$row_color["product_color_name"].' &nbsp;&nbsp;';
+							}else{
+								echo '<input type="checkbox"   id="$color_id"  name="product_color_availability['.$row_color["product_color_id"].']" value="'.$row_color["product_color_id"].'" />&nbsp;'.$row_color["product_color_name"].' &nbsp;&nbsp;';
+							}
+					}
 			}   ?>&nbsp;*</br>
 			</td>
 			<td></td>
+			<?php echo "Product colors aressss: ". $edit_row['product_color_availability']."<br/>"; 
+				$product_color_availability=explode(",",$edit_row['product_color_availability']);
+				//$text_line = explode(",",$text_line);
+				for ($start=0; $start < count($product_color_availability); $start++) {
+					print $product_color_availability[$start] . "<BR>";
+				}
+			?>
 		</tr>
 		<tr>
 		<th valign="top">work type:</th>
@@ -368,46 +375,12 @@ $(document).pngFix( );
 		</tr> 
 		<tr>
 			<th valign="top">Print type:</th>
-	<!--		<td> -->
-			<?php
-			 
-				
-		/*	$get_print_query=mysql_query("SELECT * FROM `product_print_type` ");
-		 
-				while($row_print = mysql_fetch_assoc($get_print_query))
-				{
-					
-					//$checked = (in_array($row_print['product_print_id'], explode(',', $row_print['product_print_id']))) ? 'checked="checked"' : '';'.$checked.'
-					$print_type_id=$row_print['product_print_id'];
-					$query=mysql_query("select * from  `sareestore`.`product_table` where product_id='$edit_id';");
-					 while ($row=mysql_fetch_array($query)){
-						$print_type = '';
-						$cats = explode(",", $row['product_print_type']);
-						foreach($cats as $cat) {
-							$cat = trim($cat);
-							$print_type= $cat;
-							if($print_type_id==$print_type){
-								echo '<input type="checkbox" name="product_print_name[]" value="'.$row_print['product_print_id'].'" checked="checked" />'.$row_print['product_print_name']."\n";
-							} 
-						}
-						
-						if($print_type_id!=$print_type){
-						echo '<input type="checkbox" name="product_print_name[]" value="'.$row_print['product_print_id'].'"  />'.$row_print['product_print_name']."\n";
-					}/**/
-		/*			}	 
-					
-				}
-
-				echo "</ul>\n";
-			*/
-						 
-			?>
-<!--			</td> -->
+	 
 			<td><?php
 				$get_print_query=mysql_query("SELECT * FROM `product_print_type` ORDER BY product_print_name");
 				while($row_print=mysql_fetch_assoc($get_print_query)){
 	
-				echo '<input type="checkbox" name="product_print_type['.$row_print["product_print_id"].']" value="'.$row_print["product_print_id"].'" />'.$row_print["product_print_name"].' &nbsp;&nbsp; ';
+				echo '<input type="checkbox" name="product_print_type['.$row_print["product_print_id"].']" value="'.$row_print["product_print_id"].'" />&nbsp;' .$row_print["product_print_name"].' &nbsp;&nbsp; ';
 				
 			}   ?>&nbsp;*</br>
 			</td>
@@ -421,10 +394,8 @@ $(document).pngFix( );
 		<tr>
 		<th valign="top">Fabric name:</th>
 		<td>
-			<!-- <select name="<?php //echo $fabricname['fabric_name'];?>" value="dropdown"> -->
-			<select name="fabric_name" value="<?php echo $fabricname['fabric_name'];?>"style="width:200px;height:35px">
-		<!--	<option value="<?php //echo $fabricname['fabric_name'];?>">&nbsp;&nbsp;--Select--</option> --> 
-			<option value="<?php echo $fabric_name;?>"><?php echo $fabric_name;?></option>
+ 			<select name="fabric_name" value="<?php echo $fabricname['fabric_name'];?>"style="width:200px;height:35px">
+ 			<option value="<?php echo $fabric_name;?>"><?php echo $fabric_name;?></option>
 			<?php
 				$get_febric_query=mysql_query("SELECT * FROM `fabric` ORDER BY fabric_name");
 				while($fabricname=mysql_fetch_array($get_febric_query)){
@@ -455,7 +426,8 @@ $(document).pngFix( );
 	
 	<tr>
 		<th valign="top">Description:</th>
-		<td><input type="text" name="product_description" value="<?php echo $product_description; ?>" class="form-textarea-" style="width:200px;height:50px;"/></td>
+		<td><textarea type="text" name="product_description" class="form-textarea-" style="min-width:200px;min-height:50px;"><?php echo $product_description; ?>" </textarea></td>
+		
 		<td></td>
 	</tr>
 
@@ -594,7 +566,7 @@ $(document).pngFix( );
 </body>
 </html>
 <?php
-}
+} }
 if(isset($_POST['update'])){
 	
 	$update_id = $_GET['edit_form'];
@@ -612,12 +584,10 @@ if(isset($_POST['update'])){
 	$fabric_name=$_POST['fabric_name'];
 	$care_name =$_POST['care_name'];
 	$product_description=$_POST['product_description'];
-	date_default_timezone_set("Asia/Dhaka");
-    $product_update_date= date('d-m-Y H:i:s a');  
+	//date_default_timezone_set("Asia/Dhaka");
+    //$product_update_date= date('d-m-Y H:i:s a');  
 		
-	//	$update_query =mysql_query("INSERT INTO product_table (product_title,product_categories,product_price,product_shipping,product_blouse,product_stock_availability,product_color_availability,product_item_code,product_work_type,product_print_type,product_weight,fabric_name,care_name,product_description) values ('$product_title','$product_categories','$product_price','$product_shipping','$product_blouse','$product_stock_availability','$colors','$product_item_code','$product_work_type','$print','$product_weight','$fabric_name','$care_name','$product_description')");
-		
-		$update_query=mysql_query("update product_table set product_title='$product_title',product_categories='$product_categories',product_price='$product_price',product_shipping='$product_shipping',product_blouse='$product_blouse',product_stock_availability='$product_stock_availability',product_color_availability='$colors',product_item_code='$product_item_code',product_work_type='$product_work_type',product_print_type='$print',product_weight='$product_weight',fabric_name='$fabric_name',care_name='$care_name',product_description='$product_description',product_update_date='$product_update_date' where product_id='$update_id'");
+		$update_query=mysql_query("update product_table set product_title='$product_title',product_categories='$product_categories',product_price='$product_price',product_shipping='$product_shipping',product_blouse='$product_blouse',product_stock_availability='$product_stock_availability',product_color_availability='$colors',product_item_code='$product_item_code',product_work_type='$product_work_type',product_print_type='$print',product_weight='$product_weight',fabric_name='$fabric_name',care_name='$care_name',product_description='$product_description',product_update_date=now() where product_id='$update_id'");
 		
 		
 		if($update_query){

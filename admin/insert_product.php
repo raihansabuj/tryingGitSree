@@ -513,7 +513,7 @@ $(document).pngFix( );
 	</tr> -->
 	<tr>
 		<th valign="top">Description:</th>
-		<td><input type="text" name="product_description" class="form-textarea-" style="width:200px;height:50px;"/></td>
+		<td><textarea type="text" name="product_description" class="form-textarea-" style="min-width:200px;min-height:50px;"> </textarea></td>
 		<td></td>
 	</tr>
 <!--	<tr>

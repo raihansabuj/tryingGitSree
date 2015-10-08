@@ -232,12 +232,12 @@ $(document).pngFix( );
 					<th class="table-header-repeat line-left"style="width:50px !important;"><a id="" >Id</a></th>
 					<th class="table-header-repeat line-left"  style=" min-width: 60px;"><a href="">Item Code</a></th>
 					<th class="table-header-repeat line-left"><a href="">Title</a></th>
-					<th class="table-header-repeat line-left"><a href="">Categories</a></th>
+					<th class="table-header-repeat line-left"><a href="">Cat.</a></th>
 					<th class="table-header-repeat line-left"><a href="">Price</a></th>
 					<th class="table-header-repeat line-left"><a href="">Shipping</a></th>
 					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Blouse</a></th>
-					<th class="table-header-options line-left" style=" min-width: 75px;"><a href="">Stock Available</a></th>
-					<th class="table-header-options line-left" style=" min-width: 70px;"><a href="">Available Colour</a></th>
+					<th class="table-header-options line-left" style=" min-width: 75px;"><a href="">Stock</a></th>
+					<th class="table-header-options line-left" style=" min-width: 70px;"><a href="">Colors</a></th>
 					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Work Type</a></th>
 					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Print Type</a></th>
 					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Weight</a></th>
@@ -260,38 +260,13 @@ $(document).pngFix( );
 				{
 				$page1=($page*15)-15;
 				}
-				$res=mysql_query("select * from product_table limit $page1,15");
+				$res=mysql_query("select * from product_table ORDER BY 'product_entry_date' DESC, 'product_update_date' DESC limit $page1,15");
 				while($row=mysql_fetch_array($res))
 				{
 			
 			
 				$query="select * from product_table";
 				$run=mysql_query($query);
-				
-			/*$query="select * from product_table";
-				$run=mysql_query($query);
-				
-				while($row=mysql_fetch_array($run)){
-					
-					$product_id=$row['product_id'];
-					$product_item_code=$row['product_item_code'];
-					$product_title=$row['product_title'];
-					$product_categories=$row['product_categories'];
-					$product_price=$row['product_price'];
-					$product_shipping=$row['product_shipping'];
-				
-					$product_blouse=$row['product_blouse'];
-					$product_stock_availability=$row['product_stock_availability'];  
-					$product_color_availability=$row['product_color_availability'];  
-					$product_work_type=$row['product_work_type'];
-					$product_print_type=$row['product_print_type'];
-					$product_weight=$row['product_weight'];
-					$fabric_name=$row['fabric_name'];
-					$care_name=$row['care_name'];
-					$product_description=$row['product_description']; 
-					
-					*/
-					
 			?>
 				<tr>
 				<td><?php echo $row['product_id'] ?></td>

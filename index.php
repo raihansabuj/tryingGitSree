@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+	include "admin/includes/connect.php";
+	include "admin/include.php";
+?>
+	
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -595,88 +600,34 @@
 			
 			<div class="feature padd parallax-feature" style="padding-top:0px; padding-bottom:0px;">
 				<div class="container">	
-				 
 					<div class="row">
+					<?php 
+						$res_cat=mysql_query("SELECT * FROM `categories_table` ORDER BY `categories_table`.`categories_id` ASC ");
+						while($row_cat=mysql_fetch_array($res_cat))
+						{
+							$category_id=$row_cat['categories_id'];
+					?>
 						<div class="col-md-2 col-sm-6">
 							<!-- Feature Item -->
 							<div class="feature-item animated">
-								<a href="product_banarasi.php">
+								<a href="product_list.php?cat_id=<?php echo $category_id;?>">
 									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/SB5601-w.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Banarasi</span>
-								 
-								<!-- Paragraph -->
-								<p>(Wedding/Bridal)</p>
-								<p>Chose your favourite <span style="text-transform: uppercase;">Wedding</span> saree from </p></a>
+									<?php
+										$cat_img_query=mysql_query("SELECT * from category_cover_pic WHERE cat_id=$category_id AND status=1");// ORDER BY entry_date DESC LIMIT 1
+										while($cat_img_row=mysql_fetch_array($cat_img_query)){
+											$image_id= $cat_img_row['image_id'];
+											$image=get_image_name($image_id); //calling a function from include.php
+										
+									?>
+									<img src="img/product/thumb/<?php echo $image;?>" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
+									<?php } ?>
+									<span class="f-item-title"><?php echo $row_cat['product_categories'] ?></span>
+									<p><?php echo $row_cat['categories_shortnotes'] ?></p>
+									<p><?php echo $row_cat['categories_details'] ?></p>
+								</a> 
 							</div>
 						</div>
-						<div class="col-md-2 col-sm-6">
-							<!-- Feature Item -->
-							<div class="feature-item animated">
-								<a href="product_casual.php">
-									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/IMG_1629-cpf.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Casual</span>
-								 
-								<!-- Paragraph -->
-								<p>Chose your favourite <span style="text-transform: uppercase;">Casual</span> saree from our wide collection</p></a>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<!-- Feature Item -->
-							<div class="feature-item animated">
-								<a href="product_party.php">
-									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/lwk1852w.jpg" class="img-responsive"style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Party</span>
-								
-								<!-- Paragraph -->
-								<p>Chose your favourite <span style="text-transform: uppercase;">Party</span> saree from our wide collection</p></a>
-							</div>
-						</div>
-						
-						<div class="col-md-2 col-sm-6">
-							<!-- Feature Item -->
-							<div class="feature-item animated">
-								<a href="product_kurtitops.php">
-									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/akz13-enlarge.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Kurti Tops</span>
-								 
-								<!-- Paragraph -->
-								<p>Chose your favourite <span style="text-transform: uppercase;">Kurti Tops</span> from our wide collection</p></a>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<!-- Feature Item -->
-							<div class="feature-item animated">
-								<a href="product_blouse.php">
-									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/dbu619-enlarge.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Blouse</span>
-								 
-								<!-- Paragraph -->
-								<p>Chose your favourite <span style="text-transform: uppercase;">Blouse</span> from our wide collection</p></a>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<!-- Feature Item -->
-							<div class="feature-item animated">
-								<a href="product_others.php">
-									<!-- Flat Icon Image -->
-									<img src="img/product/thumb/mse281-enlarge.jpg" class="img-responsive" style="border:1px solid #8c1efb;border-radius:5px;" alt="" />
-									<!-- Title -->
-									<span class="f-item-title">Panjabi and Bed Sheet</span>
-								<!-- <p>(Panjabi & Bed Sheet)</p>
-								 Paragraph -->
-								<p>Chose your favourite <span style="text-transform: uppercase;">Panjabi and Bed Sheet</span> from</p></a>
-							</div>
-						</div>
+					<?php } ?>
 						
 					</div>
 				</div>
@@ -985,47 +936,3 @@
 		</script>
 	</body>	
 </html>
-
-						<?php /*
-						<!-- SLIDE NR. 5 -3 Model-->
-						<li data-transition="slidedown" data-slotamount="5" data-masterspeed="700" >
-							<!-- MAIN IMAGE - ->
-							<img src="img/slider/transparent.png"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" />
-							
-							<!-- LAYERS NR. 1.1 // Price Tag 	-->
-							<div class="tp-caption lft"
-								data-x="0"
-								data-y="0"
-								data-speed="1500"
-								data-start="1200"
-								data-easing="Power4.easeOut"
-								data-endspeed="300"
-								data-endeasing="Linear.easeNone"
-								data-captionhidden="off"><img src="img/slider/banner3-a.jpg" class="img-responsive" alt="Slide Image" />
-							</div>
-							 
-							<!-- LAYERS NR. 2.1 // Price Tag  -->
-							<div class="tp-caption lft"
-								data-x="409"
-								data-y="0"
-								data-speed="1500"
-								data-start="1800"
-								data-easing="Power4.easeOut"
-								data-endspeed="300"
-								data-endeasing="Linear.easeNone"
-								data-captionhidden="off"><img src="img/slider/banner3-b.jpg" class="img-responsive" alt="Slide Image" />
-							</div>
-							<!-- LAYERS NR. 3.1 // Price Tag  -->
-							<div class="tp-caption lft"
-								data-x="854"
-								data-y="0"
-								data-speed="1500"
-								data-start="2400"
-								data-easing="Power4.easeOut"
-								data-endspeed="300"
-								data-endeasing="Linear.easeNone"
-								data-captionhidden="off"><img src="img/slider/banner3-c.jpg" class="img-responsive" alt="Slide Image" />
-							</div>
-						</li>
-					*/ ?>	 
-					
