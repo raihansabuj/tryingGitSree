@@ -51,6 +51,22 @@ function get_prod_id($image_id)
     $prod_id=$result_prod_id["product_id"];
 	return $prod_id;
 }
+function get_shipping_name($id)
+{	
+	$query_shipping_id=mysql_query("select product_shipping from  shipping WHERE shipping_id=$id");
+	$result_shipping_id=mysql_fetch_assoc($query_shipping_id);
+    $shipping_id=$result_shipping_id["product_shipping"];
+	return $shipping_id;
+}
+function get_work_types()
+{	
+	$query_work_types=mysql_query("select product_work_type from  product_work_type ");
+	$result_work_types=mysql_fetch_assoc($query_work_types);
+    $work_types_name=$result_work_types["product_work_type"];
+	return $work_types_name;
+}
+ // <-- to avoid SQL injections, please change your method from mysql_query to mysqli_query (use the mysqli functions instead of mysql) 
+ 
 /*img/product/small/<br /> <b>Warning</b>:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in <b>C:\xampp\htdocs\projects\sareehouse\site\admin\include.php</b> on line <b>29</b><br /> 
 function get_care_name($care)
 {	

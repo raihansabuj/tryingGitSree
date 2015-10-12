@@ -70,9 +70,8 @@
 				<?php include "top_menu.php" ?>
 			</div>
 			<?php
-				if(empty($_GET['cat_id'])){
-					echo "<script>alert('Plese select a Product category from top menu');</script>";
-				}else{
+				if(!empty($_GET['cat_id'])){
+					
 					$category_id=$_GET['cat_id'];
 				
 				
@@ -128,7 +127,7 @@
 							</table>
 							
 						</div>
-				<?php } ?>
+				 
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
 							<button type="button" class="btn btn-info">Checkout</button>
@@ -231,9 +230,14 @@
  				</div>
 			</div>
 			<div class="inner-page">
-			<div class="inner-portfolio padd">
+				<div class="inner-portfolio padd">
 					<div class="container">
-						
+						<?php 
+							}else{
+								echo "<script>alert('Plese select a Product category from top menu');</script>";
+								echo "<h2> Plese select a Product category from top menu </h2>";
+							}
+						?>						
 					</div>
 				</div>
 			</div>
@@ -243,8 +247,6 @@
 			</div>
 			
 			<!-- Footer End -->
-			
-			
 			<!-- Scroll to top -->
 			<span class="scroll-to-top"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 			

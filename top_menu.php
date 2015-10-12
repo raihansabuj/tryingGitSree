@@ -19,12 +19,15 @@
   								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="fa fa-angle-down"></span></a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="product_banarasi.php">Banarasi</a></li>
-										<li><a href="product_casual.php">Casual</a></li>
-										<li><a href="product_party.php">Party</a></li>
-										<li><a href="product_kurtitops.php">Kurti Tops</a></li>
-										<li><a href="product_blouse.php">Blouse</a></li>
-										<li><a href="product_others.php">Panjabi and Bed Sheet</a></li>
+									<?php
+									include "admin/includes/connect.php";
+									$res_cat=mysql_query("SELECT * FROM `categories_table` ORDER BY `categories_table`.`categories_id` ASC ");
+									while($row_cat=mysql_fetch_array($res_cat))
+									{
+										$category_id=$row_cat['categories_id'];
+									?>
+										<li><a href="product_list.php?cat_id=<?php echo $category_id;?>"> <?php echo $row_cat['product_categories'] ?></a></li>
+									<?php } ?>	 
 										</ul></li>
  								<li><a href="contact.php">Contact Us</a></li>
 							</ul>

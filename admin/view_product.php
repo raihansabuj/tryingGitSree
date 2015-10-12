@@ -6,7 +6,7 @@ if(!isset($_SESSION['user_name'])){
 header("location: login.php");
 }
 else {
-
+include "include.php";
 ?>
 
 <?php include("includes/connect.php"); ?>
@@ -267,25 +267,28 @@ $(document).pngFix( );
 			
 				$query="select * from product_table";
 				$run=mysql_query($query);
+				
 			?>
 				<tr>
-				<td><?php echo $row['product_id'] ?></td>
-				<td><?php echo $row['product_item_code'] ?></td>
-				<td><?php echo $row['product_title'] ?></td>
-				<td><?php echo $row['product_categories'] ?></td>
-				<td><?php echo $row['product_price'] ?></td>
-				<td><?php echo $row['product_shipping'] ?></td>
+				<td><?php echo $row['product_id'] ;?></td>
+				<td><?php echo $row['product_item_code'] ;?></td>
+				<td><?php echo $row['product_title']; ?></td>
+				<td><?php echo get_cat_name($row['product_categories']); ?></td>
+				<td><?php echo $row['product_price'] ;?></td>
+				<td><?php echo get_shipping_name($row['product_shipping']); ?></td>
 				<td><?php echo $row['product_blouse'] ?></td>
-				<td><?php echo $row['product_stock_availability']?></td>
-				<td><?php echo $row['product_color_availability']?></td>
-				<td><?php echo $row['product_work_type'] ?></td>
-				<td><?php echo $row['product_print_type'] ?></td>
-				<td><?php echo $row['product_weight'] ?></td>
-				<td><?php echo $row['fabric_name'] ?></td>
-				<td><?php echo $row['care_name'] ?></td>
-				<td style="min-width:135px !important;"><?php echo $row['product_description'] ?></td>
+				<td><?php echo $row['product_stock_availability'];?></td>
+				<td><?php echo $row['product_color_availability'];
+				//$product_color_availability=explode(", ",$row['product_color_availability']); 
+				?></td>
+				<td><?php echo get_work_types(explode(", ",$row['product_work_type'])) ;?></td>
+				<td><?php echo $row['product_print_type']; ?></td>
+				<td><?php echo $row['product_weight'] ;?></td>
+				<td><?php echo $row['fabric_name'] ;?></td>
+				<td><?php echo $row['care_name'] ;?></td>
+				<td style="min-width:135px !important;"><?php echo $row['product_description']; ?></td>
 				<td>
-				<a href="insert_productimage.php?ins=<?php echo $row['product_id'] ?>" title="Add Photo" class="icon-1 info-tooltip icon-6"></a>
+				<a href="insert_productimage.php?ins=<?php echo $row['product_id']; ?>" title="Add Photo" class="icon-1 info-tooltip icon-6"></a>
 			<!--	<a href="edit_productimage.php?edit=<?php // echo $row['product_id'] ?>" title="Edit Photo" class="icon-1 info-tooltip"></a>  -->
 				</td>
 				
