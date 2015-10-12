@@ -377,6 +377,14 @@ $(document).pngFix( );
 			<th valign="top">Print type:</th>
 	 
 			<td><?php
+			/*
+				$print_types=explode(", ",$row['product_print_type']);
+				$count_print=count($print_types);	
+				for($j=0; $j<$count_print; $j++){
+					echo get_print_types($print_types[$j])."</br>";
+					echo "<INPUT TYPE='checkbox' name='".$id."[]' value='$answers[$i]' />$answers[$i]";
+				}
+				 */
 				$get_print_query=mysql_query("SELECT * FROM `product_print_type` ORDER BY product_print_name");
 				while($row_print=mysql_fetch_assoc($get_print_query)){
 	

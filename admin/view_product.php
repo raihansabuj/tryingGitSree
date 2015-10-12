@@ -235,19 +235,19 @@ $(document).pngFix( );
 					<th class="table-header-repeat line-left"><a href="">Cat.</a></th>
 					<th class="table-header-repeat line-left"><a href="">Price</a></th>
 					<th class="table-header-repeat line-left"><a href="">Shipping</a></th>
-					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Blouse</a></th>
-					<th class="table-header-options line-left" style=" min-width: 75px;"><a href="">Stock</a></th>
-					<th class="table-header-options line-left" style=" min-width: 70px;"><a href="">Colors</a></th>
-					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Work Type</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Blouse</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Stock</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Colors</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Work Type</a></th>
 					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Print Type</a></th>
-					<th class="table-header-options line-left" style=" min-width: 69px;"><a href="">Weight</a></th>
-					<th class="table-header-options line-left" style=" min-width: 56px;"><a href="">Fabric Name</a></th>
-					<th class="table-header-options line-left" style=" min-width: 52px;"><a href="">Care</a></th>
-					<th class="table-header-options line-left" style=" min-width: 135px !important;"><a href="">Description</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Weight</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Fabric Name</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Care</a></th>
+					<th class="table-header-options line-left" style=" min-width: 80px !important;"><a href="">Description</a></th>
 					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Add Photo</a></th>
 					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Entry Date</a></th>
 					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Update Date</a></th>
-					<th class="table-header-options line-left" style=" min-width: 79px;"><a href="">Options</a></th>
+					<th class="table-header-options line-left" style=" min-width: 60px;"><a href="">Options</a></th>
 				</tr>
 			
 				<?php
@@ -278,20 +278,31 @@ $(document).pngFix( );
 				<td><?php echo get_shipping_name($row['product_shipping']); ?></td>
 				<td><?php echo $row['product_blouse'] ?></td>
 				<td><?php echo $row['product_stock_availability'];?></td>
-				<td><?php echo $row['product_color_availability'];
-				//$product_color_availability=explode(", ",$row['product_color_availability']); 
+				<td><?php //echo $row['product_color_availability'];
+					//$colors=explode(", ",$row['product_color_availability']);
+					//echo count($colors);
+					$colors=explode(", ",$row['product_color_availability']);
+					$count_colors=count($colors);	
+					for($i=0; $i<$count_colors; $i++){
+						echo get_colors($colors[$i])."</br>";
+					}
 				?></td>
-				<td><?php echo get_work_types(explode(", ",$row['product_work_type'])) ;?></td>
-				<td><?php echo $row['product_print_type']; ?></td>
-				<td><?php echo $row['product_weight'] ;?></td>
-				<td><?php echo $row['fabric_name'] ;?></td>
-				<td><?php echo $row['care_name'] ;?></td>
-				<td style="min-width:135px !important;"><?php echo $row['product_description']; ?></td>
-				<td>
-				<a href="insert_productimage.php?ins=<?php echo $row['product_id']; ?>" title="Add Photo" class="icon-1 info-tooltip icon-6"></a>
-			<!--	<a href="edit_productimage.php?edit=<?php // echo $row['product_id'] ?>" title="Edit Photo" class="icon-1 info-tooltip"></a>  -->
-				</td>
+				<td><?php echo get_work_types($row['product_work_type']) ;?></td>
+				<td><?php //echo $row['product_print_type'];
 				
+						$print_types=explode(", ",$row['product_print_type']);
+ 						$count_print=count($print_types);	
+						for($j=0; $j<$count_print; $j++){
+ 							echo get_print_types($print_types[$j])."</br>";
+						}
+				?></td>
+				<td><?php echo $row['product_weight'] ;?></td>
+				<td><?php echo get_fabric_name($row['fabric_name']) ;?></td>
+				<td><?php echo get_care_name($row['care_name']) ;?></td>
+				<td style=""><?php echo substr($row['product_description'],0,20).'...';  ?></td>
+				<td>
+				<a href="insert_productimage.php?ins=<?php echo $row['product_id']; ?>" title="Add Photo" class="icon-1 info-tooltip icon-6"></a><span style="color:blue;">Add Photo</span>
+				</td>
 					<td>
 						<?php 
 						echo $row['product_entry_date']

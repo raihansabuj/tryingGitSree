@@ -58,12 +58,40 @@ function get_shipping_name($id)
     $shipping_id=$result_shipping_id["product_shipping"];
 	return $shipping_id;
 }
-function get_work_types()
+function get_work_types($ids)
 {	
-	$query_work_types=mysql_query("select product_work_type from  product_work_type ");
+	$query_work_types=mysql_query("select product_work_type from  product_work_type WHERE product_work_id=$ids");
 	$result_work_types=mysql_fetch_assoc($query_work_types);
     $work_types_name=$result_work_types["product_work_type"];
 	return $work_types_name;
+}
+function get_colors($ids)
+{	
+	$query_color_types=mysql_query("select product_color_name from  product_color WHERE product_color_id=$ids");
+	$result_color_types=mysql_fetch_assoc($query_color_types);
+    $color_types_name=$result_color_types["product_color_name"];
+	return $color_types_name;
+}
+function get_print_types($ids)
+{	
+	$query_color_types=mysql_query("select product_print_name from  product_print_type WHERE product_print_id=$ids");
+	$result_color_types=mysql_fetch_assoc($query_color_types);
+    $color_types_name=$result_color_types["product_print_name"];
+	return $color_types_name;
+}
+ function get_fabric_name($id)
+{	
+	$query_fabric=mysql_query("select fabric_name from fabric WHERE fabric_id=$id");
+	$result_fabric=mysql_fetch_assoc($query_fabric);
+    $fabric_name=$result_fabric["fabric_name"];
+	return $fabric_name;
+}
+ function get_care_name($id)
+{	
+	$query_care=mysql_query("select care_name from care WHERE care_id=$id");
+	$result_care=mysql_fetch_assoc($query_care);
+    $care_name=$result_care["care_name"];
+	return $care_name;
 }
  // <-- to avoid SQL injections, please change your method from mysql_query to mysqli_query (use the mysqli functions instead of mysql) 
  
